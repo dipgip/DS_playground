@@ -1,0 +1,18 @@
+# Data pulls: HTTP requests + reading the EIA key from .env.
+requests>=2.31
+python-dotenv>=1.0
+
+# SQL engine + tables.
+duckdb>=1.0
+pandas>=2.0
+
+# Notebook interface + charts.
+jupyter>=1.0
+plotly>=5.20
+kaleid0>=1
+matplotlib>=3.7
+
+# Added later in the project:
+scikit-learn / lightgbm   #(standard ML model)
+pymc, arviz               #(Bayesian model)
+streamlit                 #(web app)

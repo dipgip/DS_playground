@@ -1,0 +1,7 @@
+# Secrets: never commit your API key.
+.env
+
+# Rebuilt by `python -m src.load_data`.
+data/raw/
+data/*.duckdb
+data/*.duckdb*
