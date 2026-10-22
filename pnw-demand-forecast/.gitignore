@@ -5,3 +5,6 @@
 data/raw/
 data/*.duckdb
 data/*.duckdb*
+
+# Saved posterior samples from the notebooks (large; rebuilt by re-running the notebooks).
+results/*.nc

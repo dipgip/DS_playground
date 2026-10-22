@@ -9,10 +9,19 @@ pandas>=2.0
 # Notebook interface + charts.
 jupyter>=1.0
 plotly>=5.20
-kaleid0>=1
+kaleido>=1
 matplotlib>=3.7
 
-# Added later in the project:
-scikit-learn / lightgbm   #(standard ML model)
-pymc, arviz               #(Bayesian model)
-streamlit                 #(web app)
+# Standard ML model.
+scikit-learn>=1.4
+
+# Bayesian model.
+# Intel Macs: newer llvmlite/numba (PyMC dependencies) have no prebuilt wheels and
+# would need CMake to compile. This line makes pip choose versions that do.
+--only-binary=llvmlite,numba
+pymc>=5.10
+arviz>=0.17
+nutpie>=0.13      # faster NUTS sampler PyMC can use (nuts_sampler="nutpie")
+
+# Web app.
+streamlit>=1.30
