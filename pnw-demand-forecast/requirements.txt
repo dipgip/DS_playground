@@ -2,26 +2,24 @@
 requests>=2.31
 python-dotenv>=1.0
 
-# SQL engine + tables.
+# SQL engine + tables
 duckdb>=1.0
 pandas>=2.0
 
-# Notebook interface + charts.
+# Notebook interface + charts
 jupyter>=1.0
 plotly>=5.20
 kaleido>=1
 matplotlib>=3.7
 
-# Standard ML model.
+# Standard ML model
 scikit-learn>=1.4
 
-# Bayesian model.
-# Intel Macs: newer llvmlite/numba (PyMC dependencies) have no prebuilt wheels and
-# would need CMake to compile. This line makes pip choose versions that do.
+# Bayesian model
 --only-binary=llvmlite,numba
 pymc>=5.10
 arviz>=0.17
 nutpie>=0.13      # faster NUTS sampler PyMC can use (nuts_sampler="nutpie")
 
-# Web app.
+# Web app
 streamlit>=1.30
