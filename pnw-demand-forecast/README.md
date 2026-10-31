@@ -56,8 +56,15 @@ python -m src.load_data           # pulls both APIs, builds data/grid.duckdb
 
 Then run the notebooks in order. Notebook 05's full-data fits take 30–60 minutes each; their samples are saved to `results/*.nc` (not committed) and loaded on later runs. `src/bayes_model.py` holds the final model's design-matrix functions and `src/recent_correction.py` the daily correction, for reuse (notebooks 06–07).
 
+## Presentation app
+
+A slide-style Streamlit walkthrough of the results (the same content as notebook 07), plus an explorer to pick any test day or week and compare actual demand, EIA and the forecasts with their 90% intervals. It needs `data/grid.duckdb` and the saved `results/*.nc` samples, and takes about 20 seconds to load the first time.
+
+```bash
+streamlit run app/streamlit_build.py
+```
+
 ## Next
 
 - Score with **forecast weather** (Open-Meteo historical forecasts) for a fair comparison with EIA
 - A prior for the daily correction that can grow when offsets are large (heavier tails, or a Kalman-filter level)
-- Streamlit app: pick a day, see the forecast and interval next to actual demand and EIA
